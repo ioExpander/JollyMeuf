@@ -8,7 +8,7 @@ Jolly Mec has decided to kill their current wifi control service (efesto) instea
 This solution uses an ESP8266 board (5$) and maybe 5$ of additionnal components and a few wires.
 All it does for now is launch a scan of RAM en EEPROM adresses.
 
-# WARNING ⚠️
+# ⚠️ WARNING ⚠️
 **Do NOT install this at home.** This is not approved by Jolly Mec, this will void your warranty, this will likely damage your stove, this might burn your house down and/or severly injur pets or people.
 
 # Instructions
