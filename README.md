@@ -11,7 +11,7 @@ All it does for now is launch a scan of RAM en EEPROM adresses.
 # ⚠️ WARNING ⚠️
 **Do NOT install this at home.** This is not approved by Jolly Mec, this will void your warranty, this will likely damage your stove, this might burn your house down and/or severly injur pets or people.
 
-# Instructions
+# In ESPHome / Home Assistant
 - copy `poelle/*` into the esphome directory
 - create a new esphome device and use the `example.yaml` as a guideline to update the base file created by ESPHome
 - once connected and booted 2 buttons will appear in the Home Assistant's device page
