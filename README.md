@@ -2,7 +2,7 @@
 ESPHome controls for my Jolly Mec Bottero 2 pellet stove using Home Assistant.
 
 ## Why ?
-Jolly Mec has decided to kill their current wifi control service (efesto) instead of making necessary changes to have it policy/GDPR compliant. They are now requesting all their customers to purchase a new 300€ wifi control module to retain an option they have already paid for. Many customers believe this is not an acceptable solution and are trying to free themselves from Jolly Mec.
+Summer 2023, Jolly Mec has decided to kill their current wifi control service (efesto) instead of making necessary changes to have it policy/GDPR compliant. Like many others, the only option that was given to me was to purchase a new 300€ wifi control module to retain an option I have already paid for. Many customers believe this is not an acceptable solution and are trying to free themselves from Jolly Mec.
 
 ## What
 This solution uses an ESP8266 board (5$) and maybe 5$ of additionnal components and a few wires.
