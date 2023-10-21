@@ -1,0 +1,39 @@
+# Don't forget to add the usual ESP-Home config 
+# This file is just an example of what needs to be added on top of a base config
+
+esphome:
+  includes:
+    - poelle/poelle.h
+  libraries:
+    - "plerup/EspSoftwareSerial"   
+
+esp8266:
+  board: d1_mini
+
+# Enable logging
+logger:
+
+
+button:
+  - platform: template
+    name: Trigger RAM Scan
+    id: trigger_RAM_scan
+    icon: "mdi:barcode-scan"
+    on_press:
+      then:
+        - lambda: |-
+            setupScan();
+        - delay: 2s
+        - lambda: |-
+            scanRAM();
+  - platform: template
+    name: Trigger EEPROM Scan
+    id: trigger_EEPROM_scan
+    icon: "mdi:barcode-scan"
+    on_press:
+      then:
+        - lambda: |-
+            setupScan();
+        - delay: 2s
+        - lambda: |-
+            scanEEPROM();
