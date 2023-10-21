@@ -20,7 +20,7 @@ All it does for now is launch a scan of RAM en EEPROM adresses.
 - the logs will start displaying the scan
 - 🕵🏼
 
-# Thank you to :
+# Thank you to
 - https://github.com/philibertc/micronova_controller
 - https://github.com/Jorre05/esphome/tree/micronova
 - https://github.com/eni23/micronova-controller
