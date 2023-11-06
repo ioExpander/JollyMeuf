@@ -13,7 +13,6 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"platformio.platformio-ide",
 				"redhat.vscode-yaml",
 				"EditorConfig.EditorConfig",
 				"ms-vscode.cpptools-extension-pack",
