@@ -1,0 +1,4 @@
+{
+    "resmon.show.cpufreq": false,
+    "resmon.show.battery": false
+}

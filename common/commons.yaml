@@ -1,0 +1,38 @@
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "${devicename}"
+    password: !secret fallback_ap_password
+
+captive_portal:
+
+sensor:
+  - platform: wifi_signal
+    name: "${display_devicename} WiFi Signal"
+    update_interval: 300s
+    entity_category: diagnostic
+
+text_sensor:
+  - platform: template
+    name: "${display_devicename} Last Restart Time"
+    id: last_restart_time
+    update_interval: 300s
+    icon: mdi:clock
+    entity_category: diagnostic
+#    device_class: timestamp
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+    on_time_sync:
+      then:
+        # Update last restart time, but only once.
+        - if:
+            condition:
+              lambda: 'return id(last_restart_time).state == "";'
+            then:
+              - text_sensor.template.publish:
+                  id: last_restart_time
+                  state: !lambda 'return id(homeassistant_time).now().strftime("%Y-%m-%dT%H:%M:%S.000000+00:00");'
